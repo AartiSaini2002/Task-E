@@ -43,6 +43,18 @@ body {
 .table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed; /* ensures total width = 100% exactly */
+}
+
+/* Explicit column widths (sum = 100%) */
+.table th:first-child,
+.table td:first-child {
+  width: 30%;
+}
+
+.table th:not(:first-child),
+.table td:not(:first-child) {
+  width: 14%;
 }
 
 .table th {
